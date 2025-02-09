@@ -4,8 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>table, th, td {border: 1px solid black;}</style>
 </head>
 <body>
-    
+    <caption>My Skills</caption>
+    <table>
+        <tr>
+            <th>Skill</th>
+            <th>Proficiency</th>
+            <th>Experience</th>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>Beginner</td>
+            <td> Less than 1 year</td>
+        </tr>
+        <tr>
+            <td>Computer Building</td>
+            <td>Expert</td>
+            <td>More than 5 years</td>
+        </tr>
+        <tr>
+            <td>Python</td>
+            <td>Intermediate</td>
+            <td> 2 years</td>
+        </tr>
+        <tr>
+            <td>Powershell</td>
+            <td>Intermediate</td>
+            <td> 2 years</td>
+        </tr>
+        <tr>
+            <td>Azure DevOps</td>
+            <td>Beginner</td>
+            <td>3 Months</td>
+        </tr>
+        <tr>
+            <td>Git</td>
+            <td>Beginner</td>
+            <td> Less than 1 year</td>
+        </tr>
+        <tr>
+            <td>Windows 11</td>
+            <td>Expert</td>
+            <td> 3 years</td>
+        </tr>   
+        <tr>
+            <td>Linux</td>
+            <td>Beginner</td>
+            <td> 1 year</td>
+        </tr>
+        <tr>
+            <td>GIS</td>
+            <td>Beginner</td>
+            <td> 1 Month</td>
+        </tr>
+        <tr>
+            <td>SQL</td>
+            <td>Beginner</td>
+            <td> 3 Months</td>    
+    </table>
+
+    <form action="">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="contact-method">Preferred Contact Method:</label><br>
+        <select id="contact-method" name="contact-method">
+            <option value="email">Email</option>
+            <option value="phone">Phone</option>
+            <option value="mail">Mail</option>
+        </select><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
 </body>
 </html>
