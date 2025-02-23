@@ -1,0 +1,21 @@
+
+body {
+    font-family: 'Times New Roman', 12;
+}
+
+h1, h2 {
+    color: aqua;
+}
+
+
+.evenrow {
+    background-color: lightgray;
+}
+
+h1 {
+    font-size: 2em; 
+}
+
+h2 {
+    font-size: 1.5em; /* Adjust the value as needed */
+}
