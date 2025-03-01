@@ -1,0 +1,19 @@
+
+
+
+nav {
+    background-color: #8b9dc3;
+}
+
+
+nav a:hover {
+    background-color: #9e5555;
+}
+
+
+nav a {
+    color: #005b96;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+}

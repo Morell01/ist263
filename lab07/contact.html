@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../lab06/styles.css">
+</head>
+<body>
+    <h1> Contact </h1>
+    <p>Marlon Orellana</p>
+    <p>Syracuse University<br>
+        Hinds Hall<br>
+        Syracuse, NY 13244</p>
+   
+    <p><a href="https://www.linkedin.com/in/merlinthewizard" target="_blank"><img src="../images/logo-sized.png" alt="Marlon's LinkedIn" style="width: 75px;">My Linkedin</a>
+    </p>
+    <p><a href= "mailto:morell01@syr.edu"> Marlon Orellana's Email</a></p>
+
+    <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5832.305076261208!2d-76.13594292308186!3d43.03822197113793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9f39fca0f3225%3A0xb7e0bcbf2e1292f6!2sHinds%20Hall%2C%20343%20Hinds%20Hall%2C%20Syracuse%2C%20NY%2013210!5e0!3m2!1sen!2sus!4v1739061075261!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+
+    <form action="https://formspree.io/f/movjlyva" method="POST">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="contact-method">Contact Method:</label><br>
+        <select id="contact-method" name="contact-method">
+            <option value="email">Email</option>
+            <option value="phone">Phone</option>
+            <option value="mail">Mail</option>
+        </select><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
+
