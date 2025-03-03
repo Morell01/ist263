@@ -1,0 +1,41 @@
+
+body {
+    background-color: #dfe3ee; 
+    color: #000000; 
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+a {
+    color: #aaaaaa;
+}
+
+
+h1, h2 {
+    color: #6497b1;
+    font-size: 2em; 
+}
+
+h2 {
+    font-size: 1.5em; 
+}
+
+
+nav {
+    background-color: #8b9dc3;
+    padding: 10px; 
+    margin-bottom: 30px;
+}
+
+
+nav a:hover {
+    background-color: #f9f9f9;
+}
+
+
+nav a {
+    color: #005b96;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+}
