@@ -1,0 +1,146 @@
+body {
+    background-color: #dfe3ee; 
+    color: #000000; 
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px; /* Add margin to the body to separate content from the edge */
+}
+
+a {
+    color: #aaaaaa;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1, h2 {
+    color: #6497b1;
+    font-size: 2em; 
+}
+
+h2 {
+    font-size: 1.5em; 
+}
+
+nav {
+    background-color: #8b9dc3;
+    padding: 10px; 
+    margin-bottom: 30px;
+}
+
+nav a:hover {
+    background-color: #f9f9f9;
+}
+
+nav a {
+    color: #005b96;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+}
+
+footer p {
+    float: left;
+}
+
+footer p:last-child {
+    float: right;
+}
+
+footer .clear {
+    clear: both;
+}
+
+.imgl {
+    float: left; 
+    margin: 10px; 
+}
+
+.clear {
+    clear: both;
+}
+
+.row {
+    display: flex;
+    margin-bottom: 20px; 
+}
+
+.column {
+    flex: 1;
+    padding: 20px; /* Space inside the containers */
+    margin: 10px; /* Space between columns */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label, form input, form select, form textarea {
+    margin-bottom: 10px;
+}
+
+form input[type="submit"] {
+    align-self: flex-start;
+}
+
+.flexbox {
+    display: flex;
+    justify-content: space-around; /* Adjust spacing of icons */
+    align-items: center;
+    margin-top: 20px;
+}
+
+.flexbox-2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.column {
+    padding: 20px;
+    margin: 10px;
+}
+
+.icons-column {
+    flex: 3; /* 3/4 of the space */
+}
+
+.aside-column {
+    flex: 1; /* 1/4 of the space */
+}
+
+.skill {
+    text-align: center;
+}
+
+.skill i {
+    font-size: 50px;
+    margin-bottom: 10px;
+    width: 50px; /* Size the icons with a width property */
+}
+
+.sidebar {
+    background-color: #7991d1;
+    padding: 10px; /* Add padding inside the aside */
+    border-radius: 10px;
+    
+}
+
+.sidebar h2 {
+    color: #000000;
+    font-size: 1.5em;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.content {
+    max-width: 75%; /* Set max-width to 75% to align with icons */
+    margin: 0 auto; /* Center the container */
+}
