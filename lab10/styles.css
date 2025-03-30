@@ -163,3 +163,8 @@ form input[type="submit"] {
     height: 300px; 
     border: 0; 
 }
+
+form {
+    flex: 1 1 100%; /* Allows the form to take full width on smaller screens */
+    max-width: 100%; /* Ensures the form does not overflow */
+}
