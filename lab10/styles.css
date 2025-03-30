@@ -165,6 +165,19 @@ form input[type="submit"] {
 }
 
 form {
-    flex: 1 1 100%; /* Allows the form to take full width on smaller screens */
-    max-width: 100%; /* Ensures the form does not overflow */
+    flex: 1 1 100%;
+    max-width: 100%; 
+}
+
+@media (max-width: 768px) {
+    nav a {
+        display: block; 
+        width: 100%;   
+        text-align: center; 
+        margin: 10px 0; 
+    }
+
+    nav span {
+        display: none; 
+    }
 }
