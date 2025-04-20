@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../lab12/styles.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a> <span>|</span> 
+        <a href="skills.html">Skills</a> <span>|</span>
+        <a href="contact.html">Contact</a> 
+    </nav>
+
+    <h1> Contact </h1>
+
+    <div class="row"> 
+        <div class="column">
+    <p>Marlon Orellana</p>
+    <p>Syracuse University<br>
+        Hinds Hall<br>
+        Syracuse, NY 13244</p>
+    </div>
+    
+    <div class="column">
+    <p><a href="https://www.linkedin.com/in/merlinthewizard" target="_blank"><img src="../images/logo-sized.png" alt="Marlon's LinkedIn" style="width: 75px;">My Linkedin</a>
+    </p>
+    <p><a href= "mailto:morell01@syr.edu"> Marlon Orellana's Email</a></p>
+    </div>
+    </div>
+
+    <div class="flexbox-container">
+        <form action="https://formspree.io/f/movjlyva" method="POST">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="contact-method">Contact Method:</label><br>
+            <select id="contact-method" name="contact-method">
+                <option value="email">Email</option>
+                <option value="phone">Phone</option>
+                <option value="mail">Mail</option>
+            </select><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+        <iframe class="map" src="https://www.google.com/maps/embed?..."></iframe>
+    </div>
+    
+</body>
+</html>
+
+
