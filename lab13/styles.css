@@ -14,7 +14,7 @@ h1 {
 }
 
 h1, h2 {
-    color: #6497b1;
+    color: #000508;
     font-size: 2em; 
 }
 
@@ -33,7 +33,7 @@ nav a:hover {
 }
 
 nav a {
-    color: #005b96;
+    color: #000000;
     text-decoration: none;
     padding: 10px;
     display: inline-block;
