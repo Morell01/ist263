@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -11,12 +10,13 @@ body {
 header {
     background-color: #333;
     color: #fff;
-    padding: 20px;
+    padding: 15px;
     text-align: left; }
 
 header h1 {
     margin: 0;
     font-size: 36px;
+    
 }
 
 nav ul {
@@ -43,7 +43,14 @@ nav ul li a:hover {
     color: #ccc;
 }
 
-/* Main Content Styles */
+nav a {
+    color: #000; 
+    background-color: #FFF; 
+    padding: 3px 10px; 
+    border-radius: 5px; 
+}
+
+
 main {
     width: 80%;
     margin: 20px auto;
@@ -78,7 +85,7 @@ section img {
 
 
 
-/* Features container */
+
 .features {
     display: flex;
     justify-content: space-between;
@@ -87,13 +94,13 @@ section img {
     margin-top: 20px;
 }
 
-/* Individual feature box */
+
 .feature {
     flex: 1;
     text-align: center;
 }
 
-/* Feature images */
+
 .feature img {
     width: 100%;
     max-width: 300px;
@@ -119,7 +126,7 @@ section img {
     }
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -271,7 +278,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* New Section: Different Types of Computers */
+
 section {
     margin-bottom: 40px;
     display: flex;
