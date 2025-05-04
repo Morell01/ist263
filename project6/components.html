@@ -6,8 +6,17 @@
     <link rel="shortcut icon" type="image/x-icon" href="../project6/images/favicon.ico">
     <link rel="stylesheet" href="../project6/style.css">
     <title>Computer Components</title>
+    <style>
+        
+        main section {
+          display: none;
+        }
+        main section:first-of-type {
+          display: flex;
+        }
+        </style>
 </head>
-<body>
+<body class="components-page">
     <header>
         <h1>TECH DAILY</h1>
         <nav>
@@ -35,14 +44,23 @@
             <div class="component-text">
                 <h3>CPU &amp; Motherboard</h3>
                 <p>The CPU and motherboard are essential components of a computer. The CPU acts as the brain, while the motherboard connects all components together.</p>
+                <p>When building a computer, it's crucial to ensure that the CPU and motherboard are compatible. This includes checking the socket type, chipset, and form factor.</p>
+                
             </div>
             <div class="component-media">
                 <img src="../project/images/cpu.jpeg" alt="CPU">
                 <img src="../project/images/motherboard.jpg" alt="Motherboard">
             </div>
+            <div>
+                <h3>CPU & Motherboard Compatibility</h3>
+                <p>When building a computer, it's crucial to ensure that the CPU and motherboard are compatible. This includes checking the socket type, chipset, and form factor.For example, if you choose an AMD Ryzen CPU, you'll need a motherboard with an AM4 socket. Similarly, Intel CPUs require motherboards with the appropriate socket type.</p>
+                <p>Additionally, the chipset on the motherboard determines the features and capabilities of the system. Make sure to choose a motherboard that supports the features you need, such as overclocking or multiple GPU support.</p>
+                <p>Lastly, consider the form factor of the motherboard. ATX, Micro-ATX, and Mini-ITX are common sizes, and they determine the size of the case you need.</p>
+                <p>By ensuring compatibility between the CPU and motherboard, you can build a powerful and efficient computer that meets your needs.</p>
+            </div>
         </section>
 
-        <!-- Power Supply -->
+
         <section id="psu" class="component-item reverse">
             <div class="component-media">
                 <img src="../project/images/psu.jpg" alt="Power Supply">
@@ -50,10 +68,13 @@
             <div class="component-text">
                 <h3>Power Supply</h3>
                 <p>The power supply unit (PSU) provides power to all components of the computer, ensuring stable and reliable operation.</p>
+                <p>When selecting a PSU, consider the wattage required for your components. A higher wattage PSU allows for future upgrades and ensures stability during peak loads. An example would be the pairing of a RTX4090 and an AMD Ryzen 7 7800X would require about 750 Watts, therefore you would want a power supply of at least 850W to ensure enough power is delivered to the computer.</p>
+                <p>Additionally, look for a PSU with an 80 PLUS certification, which indicates energy efficiency. Modular PSUs allow for better cable management, reducing clutter inside the case.Finally, ensure that the PSU has the necessary connectors for your components, such as PCIe connectors for GPUs and SATA connectors for storage devices. High end graphic cards like the 5090 require a specific cable that needs to 3 PCIE connectors which are only on certain PSU models.</p>
+                <p>By choosing a high-quality PSU, you can ensure that your computer runs smoothly and efficiently.</p>
             </div>
         </section>
 
-        <!-- Storage -->
+       
         <section id="storage" class="component-item">
             <div class="component-text">
                 <h3>Storage</h3>
