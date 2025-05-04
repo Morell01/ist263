@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../project6/images/favicon.ico">
+    <link rel="stylesheet" href="../project6/style.css">
+    <title>Computer Components</title>
 </head>
 <body>
     <header>
@@ -12,47 +14,88 @@
             <a href="index.html">HOME</a> <span>|</span>
             <a href="components.html">COMPONENTS</a> <span>|</span>
             <a href="deals.html">DEALS</a>
-            <link rel="stylesheet" href="../project6/style.css">
         </nav>
     </header>
 
+    <div id="trending">
+        <span>COMPONENTS</span>
+        <div id="trending-content">
+            <marquee behavior="scroll" direction="left" id="trending-marquee">
+                <a href="#cpu">CPU</a> &nbsp;|&nbsp;
+                <a href="#psu">Power Supplies</a> &nbsp;|&nbsp;
+                <a href="#storage">Storage</a> &nbsp;|&nbsp;
+                <a href="#gpu">GPU</a>
+            </marquee>
+        </div>
+    </div>
+
     <main>
-    <section>
-        <h2>Computer Components</h2>
-        <p>For a computer to work, it needs certain components connected to each other. It might seen complicated, but all components connect like a puzzle and are very straightfoward to explain.</p>
-        <img src="../project/images/computer_hardware_images_with_names-Y7gKT6.True.webp" alt="Computer Components Image">
-    </section>
+        <!-- CPU & Motherboard -->
+        <section id="cpu" class="component-item">
+            <div class="component-text">
+                <h3>CPU &amp; Motherboard</h3>
+                <p>The CPU and motherboard are essential components of a computer. The CPU acts as the brain, while the motherboard connects all components together.</p>
+            </div>
+            <div class="component-media">
+                <img src="../project/images/cpu.jpeg" alt="CPU">
+                <img src="../project/images/motherboard.jpg" alt="Motherboard">
+            </div>
+        </section>
 
-    <section>
-        <h2>CPU & Motherboard</h2>
-        <p>CPU & Motherboard combo and how it is essential </p>
-        <div>
-            <img src="../project/images/cpu.jpeg" alt="CPU Image">
-            <img src="../project/images/motherboard.jpg" alt="Motherboard Image">
-        </div>
-    </section>
+        <!-- Power Supply -->
+        <section id="psu" class="component-item reverse">
+            <div class="component-media">
+                <img src="../project/images/psu.jpg" alt="Power Supply">
+            </div>
+            <div class="component-text">
+                <h3>Power Supply</h3>
+                <p>The power supply unit (PSU) provides power to all components of the computer, ensuring stable and reliable operation.</p>
+            </div>
+        </section>
 
-    <section>
-        <h2>Power Supply</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat.</p>
-        <img src="../project/images/psu.jpg" alt="Power Supply Image">
-    </section>
+        <!-- Storage -->
+        <section id="storage" class="component-item">
+            <div class="component-text">
+                <h3>Storage</h3>
+                <p>Storage devices like HDDs and SSDs store your data. SSDs are faster and more reliable, while HDDs offer larger capacities at a lower cost.</p>
+            </div>
+            <div class="component-media">
+                <img src="../project/images/hdd.jpg" alt="Hard Drive">
+                <img src="../project/images/ssd.jpg" alt="Solid State Drive">
+            </div>
+        </section>
 
-    <section>
-        <h2>Storage</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat.</p>
-        <div>
-            <img src="../project/images/hdd.jpg" alt="Hard Drive">
-            <img src="../project/images/ssd.jpg" alt="Solid State Drive">
-    
-        </div>
-    </section>
+        <!-- GPU -->
+        <section id="gpu" class="component-item reverse">
+            <div class="component-media">
+                <img src="../project/images/gpu.jpg" alt="GPU">
+            </div>
+            <div class="component-text">
+                <h3>GPU</h3>
+                <p>The GPU (Graphics Processing Unit) is responsible for rendering images, videos, and 3D graphics, making it essential for gaming and design tasks.</p>
+            </div>
+        </section>
+    </main>
 
-    <section>
-        <h2>GPU</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat.</p>
-        <img src="../project/images/gpu.jpg" alt="GPU Image">
-    </section>
-</main>
+    <script>
+      // On load, hide everything except the first section
+      document.addEventListener('DOMContentLoaded', () => {
+        const allSections = document.querySelectorAll('main section');
+        allSections.forEach((section, index) => {
+          section.style.display = index === 0 ? 'flex' : 'none'; // Show only the first section
+        });
+      });
+
+      // Wire up each marquee link
+      document.querySelectorAll('#trending-marquee a').forEach(link => {
+        link.addEventListener('click', event => {
+          event.preventDefault(); // Prevent default anchor behavior
+          const targetId = link.getAttribute('href').slice(1); // Extract the ID (e.g., "cpu")
+          document.querySelectorAll('main section').forEach(section => {
+            section.style.display = section.id === targetId ? 'flex' : 'none'; // Show the matching section
+          });
+        });
+      });
+    </script>
 </body>
 </html>

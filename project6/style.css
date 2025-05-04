@@ -12,8 +12,7 @@ header {
     background-color: #333;
     color: #fff;
     padding: 20px;
-    text-align: center;
-}
+    text-align: left; }
 
 header h1 {
     margin: 0;
@@ -58,7 +57,8 @@ section {
 }
 
 section h2 {
-    font-size: 28px;
+    text-align: center;
+    font-size: 36px;
     margin-bottom: 10px;
     flex-basis: 100%;
 }
@@ -75,18 +75,41 @@ section img {
     flex: 1;
 }
 
-.image-group {
+
+
+.features {
     display: flex;
-    justify-content: space-between; /* Ensures equal spacing between images */
-    align-items: center; /* Aligns images vertically */
-    gap: 10px; /* Adds spacing between images */
-    max-width: 100%;
+    justify-content: space-between; 
+    align-items: flex-start;       /* Aligns captions under each image */
+    gap: 20px;                     /* Optional breathing room */
+    margin-top: 30px;
 }
 
-.image-group img {
-   max-width: 100%;
-    height: auto; /* Maintains aspect ratio */
-    object-fit: cover; /* Ensures consistent image size */
+
+.feature {
+    flex: 1 1 0;       
+    max-width: 30%;  
+    text-align: center;
+}
+
+
+.feature img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 12px; /* Space between image and caption */
+}
+
+
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+    .feature {
+        max-width: 80%;
+        margin-bottom: 40px;
+    }
 }
 
 /* Responsive Design */
@@ -102,12 +125,12 @@ section img {
     }
 
     .image-group {
-        flex-direction: column; /* Stacks images vertically on smaller screens */
+        flex-direction: column; 
         align-items: center;
     }
 
     .image-group img {
-        width: 80%; /* Images take up more space on smaller screens */
+        width: 80%; 
     }
 }
 
@@ -128,3 +151,150 @@ section img {
         font-size: 14px;
     }
 }
+
+
+/* 1. Component-item flex container */
+.component-item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+/* 2. Reverse layout for every even item */
+.component-item.reverse {
+    flex-direction: row-reverse;
+}
+
+/* 3. Text block */
+.component-text {
+    flex: 1;
+}
+
+/* 4. Media block (1 or 2 images) */
+.component-media {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: nowrap; /* Prevents images from wrapping */
+}
+
+/* 5. Make images responsive */
+.component-media img {
+    width: 100%;
+    max-width: 300px; /* Adjust size as needed */
+    height: auto;
+    display: block;
+}
+
+/* 6. Section headings */
+.component-text h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+/* 7. Responsive fallback: stack on small screens */
+@media (max-width: 768px) {
+    .component-item {
+        flex-direction: column !important; /* Stacks text and images vertically */
+        text-align: center;
+    }
+
+    .component-media {
+        flex-direction: column; /* Stacks images vertically */
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .component-media img {
+        max-width: 80%; /* Reduces image size on smaller screens */
+    }
+}
+.feature img,
+.component-media img {
+  mix-blend-mode: multiply;
+}
+
+@media (max-width: 480px) {
+    .component-text h3 {
+        font-size: 20px; 
+    }
+
+    .component-media img {
+        max-width: 100%; 
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+
+#trending {
+    background-color: #f4f4f4;
+    border-bottom: 2px solid #000;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Arial, sans-serif;
+}
+
+#trending span {
+    font-weight: bold;
+    color: #000;
+    margin-right: 20px;
+}
+
+#trending-content {
+    flex: 1;
+    overflow: hidden;
+}
+
+marquee {
+    font-size: 16px;
+    color: #333;
+    white-space: nowrap;
+}
+
+marquee a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+marquee a:hover {
+    text-decoration: underline;
+}
+
+/* Slideshow Styles */
+#slideshow-container {
+    background-color: #000000;
+    width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+#bigimages img,
+#componentinfo > div {
+    display: none;
+}
+
+#bigimages img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+/* Ensure sections are hidden by default when toggled */
+main section {
+    display: none; /* Hidden by default */
+}
+
+main section:first-of-type {
+    display: flex; /* Show the first section by default */
+}
+
