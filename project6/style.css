@@ -7,7 +7,7 @@ body {
     color: #333;
 }
 
-/* Header Styles */
+
 header {
     background-color: #333;
     color: #fff;
@@ -200,15 +200,15 @@ section img {
     margin-bottom: 12px;
 }
 
-/* 7. Responsive fallback: stack on small screens */
+
 @media (max-width: 768px) {
     .component-item {
-        flex-direction: column !important; /* Stacks text and images vertically */
+        flex-direction: column !important;
         text-align: center;
     }
 
     .component-media {
-        flex-direction: column; /* Stacks images vertically */
+        flex-direction: column; 
         justify-content: center;
         align-items: center;
         margin-top: 20px;

@@ -70,13 +70,15 @@
                 <a href="#cpu">CPU</a> &nbsp;|&nbsp;
                 <a href="#psu">Power Supplies</a> &nbsp;|&nbsp;
                 <a href="#storage">Storage</a> &nbsp;|&nbsp;
-                <a href="#gpu">GPU</a>
+                <a href="#gpu">GPU</a> &nbsp;|&nbsp;
+                <a href="#ram">RAM</a> 
+
             </div>
         </div>
     </div>
 
     <main>
-        <!-- CPU & Motherboard -->
+        
         <section id="cpu" class="component-item">
             <div class="component-text">
                 <h3>CPU &amp; Motherboard</h3>
@@ -113,7 +115,7 @@
         <section id="storage" class="component-item">
             <div class="component-text">
                 <h3>Storage</h3>
-                <p>Storage devices like HDDs and SSDs store your data. SSDs are faster and more reliable, while HDDs offer larger capacities at a lower cost.</p>
+                <p>Storage devices like HDDs and SSDs store your data. SSDs are faster and more reliable, while HDDs offer larger capacities at a lower cost. In current times, SSDs have been cheaper as it is continuously evolving and you can get one with over 1TB of storage for almost the same price of a hard drive.</p>
                 <p>When choosing storage for your computer, consider the type of storage device that best suits your needs. Solid State Drives (SSDs) are faster and more reliable than traditional Hard Disk Drives (HDDs), making them ideal for operating systems and frequently used applications. However, HDDs offer larger capacities at a lower cost, making them suitable for bulk data storage. For optimal performance, consider using a combination of both SSDs and HDDs. Install your operating system and essential applications on the SSD for quick boot times and responsiveness, while using the HDD for storing large files like videos, photos, and backups. Both are reliable, but SSDs use NAND chips, which generate a lot of heat and can be more prone to issues down the line.</p>
                 <p>Additionally, consider the interface type. SATA SSDs are widely compatible, while NVMe SSDs offer faster speeds but may require a compatible motherboard. Lastly, ensure that you have enough storage capacity for your needs, taking into account future expansion possibilities.</p>
                 <p>By carefully selecting your storage devices, you can enhance your computer's performance and ensure that you have enough space for all your data.</p>
@@ -124,28 +126,42 @@
             </div>
         </section>
 
-        <!-- GPU -->
+       
         <section id="gpu" class="component-item reverse">
             <div class="component-media">
                 <img src="../project/images/gpu.jpg" alt="GPU">
             </div>
             <div class="component-text">
                 <h3>GPU</h3>
-                <p>The GPU (Graphics Processing Unit) is responsible for rendering images, videos, and 3D graphics, making it essential for gaming and design tasks.</p>
+                <p>The GPU (Graphics Processing Unit) is responsible for rendering images, videos, and 3D graphics, making it essential for gaming and design tasks. When selecting a GPU, consider the performance requirements for your applications. High-end GPUs are necessary for gaming and graphic design, while mid-range GPUs are suitable for general use and light gaming. Additionally, check the compatibility with your motherboard and power supply. Ensure that the GPU fits in your case and has the necessary power connectors. An example would be the RTX 5060, which is a budget friendly graphics card that can handle 1080p gaming easily.</p>
+                <p>Consider the VRAM (Video RAM) capacity, as it affects performance in high-resolution gaming and graphic-intensive tasks. A minimum of 4GB of VRAM is recommended for modern gaming, while 8GB or more is ideal for 4K gaming and professional applications. It depends on how much work you will do which will make you have to select a higher end card. AI is an application that requires a lot of horspower and a lot of VRAM, so a 5090 would be the most ideal for the workload.</p>
+                <p>Lastly, consider the cooling solution. High-performance GPUs generate heat, so ensure that your case has adequate airflow and consider aftermarket cooling solutions if necessary. By choosing the right GPU, you can enhance your computer's graphics performance and enjoy a smoother experience in gaming and design tasks.</p>
+            </div>
+        </section>
+        <section id="ram" class="component-item">
+            <div class="component-text">
+                <h3>RAM</h3>
+                <p>RAM (Random Access Memory) is essential for multitasking and running applications smoothly. It temporarily stores data that the CPU needs to access quickly, allowing for faster performance.</p>
+                <p>When selecting RAM, consider the capacity and speed. For most users, 16GB of RAM is sufficient for general tasks, while gamers and content creators may benefit from 32GB or more. Additionally, look for RAM with higher speeds (measured in MHz) for better performance. DDR4 and DDR5 are common types of RAM, with DDR5 offering faster speeds and improved efficiency.</p>
+                <p>Ensure that the RAM is compatible with your motherboard and CPU. Check the motherboard's specifications for supported RAM types and speeds. Finally, consider the number of RAM slots available on your motherboard for future upgrades. By choosing the right RAM, you can enhance your computer's performance and ensure smooth multitasking.</p>
+                <p>When selecting RAM, consider the capacity and speed. For most users, 16GB of RAM is sufficient for general tasks, while gamers and content creators may benefit from 32GB or more. Additionally, look for RAM with higher speeds (measured in MHz) for better performance. DDR4 and DDR5 are common types of RAM, with DDR5 offering faster speeds and improved efficiency.</p>
+
+            <div class="component-media">
+                <img src="../project/images/ram.jpg" alt="RAM or Random Access Memory">
             </div>
         </section>
     </main>
 
     <script>
-  // On load, hide everything except the first section
+  
   document.addEventListener('DOMContentLoaded', () => {
     const allSections = document.querySelectorAll('main section');
     allSections.forEach((section, index) => {
-      section.style.display = index === 0 ? 'flex' : 'none'; // Show only the first section
+      section.style.display = index === 0 ? 'flex' : 'none'; 
     });
   });
 
-  // Wire up each scrolling link
+  
   document.querySelectorAll('#trending-content .scrolling-text a').forEach(link => {
     link.addEventListener('click', event => {
       event.preventDefault(); // Prevent default anchor behavior
