@@ -14,7 +14,44 @@
         main section:first-of-type {
           display: flex;
         }
-        </style>
+
+      
+        #trending-content {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    background-color: #f4f4f4;
+    padding: 10px 0;
+}
+
+
+.scrolling-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 15s linear infinite;
+}
+
+.scrolling-text a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.scrolling-text a:hover {
+    text-decoration: underline;
+}
+
+/* Keyframes for scrolling animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+    </style>
 </head>
 <body class="components-page">
     <header>
@@ -28,13 +65,13 @@
 
     <div id="trending">
         <span>COMPONENTS</span>
-        <div id="trending-content">
-            <marquee behavior="scroll" direction="left" id="trending-marquee">
+        <div id="trending-content" aria-label="Trending Components">
+            <div class="scrolling-text">
                 <a href="#cpu">CPU</a> &nbsp;|&nbsp;
                 <a href="#psu">Power Supplies</a> &nbsp;|&nbsp;
                 <a href="#storage">Storage</a> &nbsp;|&nbsp;
                 <a href="#gpu">GPU</a>
-            </marquee>
+            </div>
         </div>
     </div>
 
@@ -54,9 +91,7 @@
             <div>
                 <h3>CPU & Motherboard Compatibility</h3>
                 <p>When building a computer, it's crucial to ensure that the CPU and motherboard are compatible. This includes checking the socket type, chipset, and form factor.For example, if you choose an AMD Ryzen CPU, you'll need a motherboard with an AM4 socket. Similarly, Intel CPUs require motherboards with the appropriate socket type.</p>
-                <p>Additionally, the chipset on the motherboard determines the features and capabilities of the system. Make sure to choose a motherboard that supports the features you need, such as overclocking or multiple GPU support.</p>
-                <p>Lastly, consider the form factor of the motherboard. ATX, Micro-ATX, and Mini-ITX are common sizes, and they determine the size of the case you need.</p>
-                <p>By ensuring compatibility between the CPU and motherboard, you can build a powerful and efficient computer that meets your needs.</p>
+                <p>Additionally, the chipset on the motherboard determines the features and capabilities of the system. Make sure to choose a motherboard that supports the features you need, such as overclocking or multiple GPU support. Lastly, consider the form factor of the motherboard. ATX, Micro-ATX, and Mini-ITX are common sizes, and they determine the size of the case you need. By ensuring compatibility between the CPU and motherboard, you can build a powerful and efficient computer that meets your needs.</p>
             </div>
         </section>
 
@@ -79,6 +114,9 @@
             <div class="component-text">
                 <h3>Storage</h3>
                 <p>Storage devices like HDDs and SSDs store your data. SSDs are faster and more reliable, while HDDs offer larger capacities at a lower cost.</p>
+                <p>When choosing storage for your computer, consider the type of storage device that best suits your needs. Solid State Drives (SSDs) are faster and more reliable than traditional Hard Disk Drives (HDDs), making them ideal for operating systems and frequently used applications. However, HDDs offer larger capacities at a lower cost, making them suitable for bulk data storage. For optimal performance, consider using a combination of both SSDs and HDDs. Install your operating system and essential applications on the SSD for quick boot times and responsiveness, while using the HDD for storing large files like videos, photos, and backups. Both are reliable, but SSDs use NAND chips, which generate a lot of heat and can be more prone to issues down the line.</p>
+                <p>Additionally, consider the interface type. SATA SSDs are widely compatible, while NVMe SSDs offer faster speeds but may require a compatible motherboard. Lastly, ensure that you have enough storage capacity for your needs, taking into account future expansion possibilities.</p>
+                <p>By carefully selecting your storage devices, you can enhance your computer's performance and ensure that you have enough space for all your data.</p>
             </div>
             <div class="component-media">
                 <img src="../project/images/hdd.jpg" alt="Hard Drive">
@@ -99,24 +137,24 @@
     </main>
 
     <script>
-      // On load, hide everything except the first section
-      document.addEventListener('DOMContentLoaded', () => {
-        const allSections = document.querySelectorAll('main section');
-        allSections.forEach((section, index) => {
-          section.style.display = index === 0 ? 'flex' : 'none'; // Show only the first section
-        });
-      });
+  // On load, hide everything except the first section
+  document.addEventListener('DOMContentLoaded', () => {
+    const allSections = document.querySelectorAll('main section');
+    allSections.forEach((section, index) => {
+      section.style.display = index === 0 ? 'flex' : 'none'; // Show only the first section
+    });
+  });
 
-      // Wire up each marquee link
-      document.querySelectorAll('#trending-marquee a').forEach(link => {
-        link.addEventListener('click', event => {
-          event.preventDefault(); // Prevent default anchor behavior
-          const targetId = link.getAttribute('href').slice(1); // Extract the ID (e.g., "cpu")
-          document.querySelectorAll('main section').forEach(section => {
-            section.style.display = section.id === targetId ? 'flex' : 'none'; // Show the matching section
-          });
-        });
+  // Wire up each scrolling link
+  document.querySelectorAll('#trending-content .scrolling-text a').forEach(link => {
+    link.addEventListener('click', event => {
+      event.preventDefault(); // Prevent default anchor behavior
+      const targetId = link.getAttribute('href').slice(1); // Extract the ID (e.g., "cpu")
+      document.querySelectorAll('main section').forEach(section => {
+        section.style.display = section.id === targetId ? 'flex' : 'none'; // Show the matching section
       });
-    </script>
+    });
+  });
+</script>
 </body>
 </html>

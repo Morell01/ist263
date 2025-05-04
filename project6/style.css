@@ -260,21 +260,6 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
 }
 
-marquee {
-    font-size: 16px;
-    color: #333;
-    white-space: nowrap;
-}
-
-marquee a {
-    color: #007BFF;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-marquee a:hover {
-    text-decoration: underline;
-}
 
 
 
