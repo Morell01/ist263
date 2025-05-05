@@ -73,7 +73,7 @@
 
     <div id="trending">
         <span>COMPONENTS</span>
-        <div id="trending-content" aria-label="Trending Components">
+        <div id="trending-content">
             <div class="scrolling-text">
                 <a href="#cpu">CPU</a> &nbsp;|&nbsp;
                 <a href="#psu">Power Supplies</a> &nbsp;|&nbsp;
@@ -153,6 +153,7 @@
                 <p>When selecting RAM, consider the capacity and speed. For most users, 16GB of RAM is sufficient for general tasks, while gamers and content creators may benefit from 32GB or more. Additionally, look for RAM with higher speeds (measured in MHz) for better performance. DDR4 and DDR5 are common types of RAM, with DDR5 offering faster speeds and improved efficiency.</p>
                 <p>Ensure that the RAM is compatible with your motherboard and CPU. Check the motherboard's specifications for supported RAM types and speeds. Finally, consider the number of RAM slots available on your motherboard for future upgrades. By choosing the right RAM, you can enhance your computer's performance and ensure smooth multitasking.</p>
                 <p>When selecting RAM, consider the capacity and speed. For most users, 16GB of RAM is sufficient for general tasks, while gamers and content creators may benefit from 32GB or more. Additionally, look for RAM with higher speeds (measured in MHz) for better performance. DDR4 and DDR5 are common types of RAM, with DDR5 offering faster speeds and improved efficiency.</p>
+            </div>
 
             <div class="component-media">
                 <img src="../project/images/ram.jpg" alt="RAM or Random Access Memory">
@@ -172,10 +173,10 @@
   
   document.querySelectorAll('#trending-content .scrolling-text a').forEach(link => {
     link.addEventListener('click', event => {
-      event.preventDefault(); // Prevent default anchor behavior
-      const targetId = link.getAttribute('href').slice(1); // Extract the ID (e.g., "cpu")
+      event.preventDefault(); 
+      const targetId = link.getAttribute('href').slice(1); 
       document.querySelectorAll('main section').forEach(section => {
-        section.style.display = section.id === targetId ? 'flex' : 'none'; // Show the matching section
+        section.style.display = section.id === targetId ? 'flex' : 'none'; 
       });
     });
   });
